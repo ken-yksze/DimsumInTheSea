@@ -1,3 +1,4 @@
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class BubbleControl : MonoBehaviour
@@ -43,6 +44,10 @@ public class BubbleControl : MonoBehaviour
             SizeChanged?.Invoke(_size);
         }
     }
+
+    public GameObject collisionEffectPrefab; // Assign a visual effect prefab in the Inspector.
+    public AudioClip collisionSound; // Assign an audio clip in the Inspector.
+    public AudioClip collectSound; // Assign an audio clip in the Inspector.
 
     void AdjustSize(float airAmount)
     {
@@ -104,13 +109,43 @@ public class BubbleControl : MonoBehaviour
         }
     }
 
-    void OnDisabled()
-    {
-
-    }
-
     void OnDestroy()
     {
+        Rigidbody2D playerRb = player.GetComponent<Rigidbody2D>();
+        playerRb.simulated = true;
+    }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            if (collisionEffectPrefab)
+            {
+                Instantiate(collisionEffectPrefab, collision.contacts[0].point, Quaternion.identity);
+            }
+
+            if (collisionSound)
+            {
+                AudioSource.PlayClipAtPoint(collisionSound, transform.position, 1.0f);
+            }
+
+            Destroy(gameObject);
+        }
+
+        if (collision.gameObject.CompareTag("Dimsum"))
+        {
+            if (collisionEffectPrefab)
+            {
+                Instantiate(collisionEffectPrefab, collision.contacts[0].point, Quaternion.identity);
+            }
+
+            if (collectSound)
+            {
+                AudioSource.PlayClipAtPoint(collectSound, transform.position, 1.0f);
+            }
+
+            // Destroy the dim sum object
+            Destroy(collision.gameObject);
+        }
     }
 }
