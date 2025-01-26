@@ -6,15 +6,20 @@ public class PlayerBubbleControl : MonoBehaviour
     public BubbleControl bubbleBc;
     public Rigidbody2D rb;
 
+    public GameControl gameControl; // Reference to your GameControl script
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        bubble = GameObject.Find("Bubble");
+        bubbleBc = bubble.GetComponent<BubbleControl>();
+        gameControl = FindAnyObjectByType<GameControl>(); // Cache GameControl reference
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (bubbleBc != null)
+        if (bubbleBc.activeSelf)
         {
             float vertical = Input.GetAxis("Vertical");
 
@@ -27,13 +32,21 @@ public class PlayerBubbleControl : MonoBehaviour
 
     void LateUpdate()
     {
-        if (bubble != null)
+        if (bubble.activeSelf)
         {
             transform.position = new Vector3(bubble.transform.position.x, bubble.transform.position.y, transform.position.z);
         }
         else
         {
             rb.simulated = true;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            gameControl.GameOver();
         }
     }
 }
