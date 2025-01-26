@@ -14,10 +14,11 @@ public class PlayerBubbleControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (bubbleBc != null) {
+        if (bubbleBc != null)
+        {
             float vertical = Input.GetAxis("Vertical");
 
-            if(Mathf.Abs(vertical) >= 0.0001f)
+            if (Mathf.Abs(vertical) >= 0.0001f)
             {
                 bubbleBc.airAmount += vertical / 16f;
             }
