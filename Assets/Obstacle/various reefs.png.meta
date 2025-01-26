@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      various reefs_0: 5646477723280291210
+      various reefs_1: -2872235570187266672
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

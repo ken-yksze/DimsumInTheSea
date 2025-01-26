@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Peach reefs_0: -7464333833087017095
+      Peach reefs_1: 9119794170383824404
+      Peach reefs_2: -6412496775032172533
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

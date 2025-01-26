@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Dark green reefs_0: -1826977449037140477
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

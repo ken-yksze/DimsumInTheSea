@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pink reefs__0: 3290942337451727914
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

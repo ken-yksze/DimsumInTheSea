@@ -18,6 +18,6 @@ public class CameraFollow : MonoBehaviour
     // LateUpdate is called once per frame after Update
     void LateUpdate()
     {
-        transform.position = new Vector3(Mathf.Clamp(playerTf.position.x + _offsetX, 0, _cameraRightLimit - 15.5f), transform.position.y, transform.position.z);
+        transform.position = new Vector3(Mathf.Clamp(playerTf.position.x + _offsetX, 0, _cameraRightLimit - 15.278f), transform.position.y, transform.position.z);
     }
 }

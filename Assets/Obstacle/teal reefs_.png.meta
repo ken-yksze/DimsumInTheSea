@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      teal reefs__0: 7689681071755364645
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -307,7 +307,7 @@ GameObject:
   - component: {fileID: 737926997}
   - component: {fileID: 737926996}
   m_Layer: 5
-  m_Name: Game_Name
+  m_Name: Game Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -522,7 +522,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1260343845}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &843676877
@@ -598,7 +599,7 @@ GameObject:
   - component: {fileID: 976287738}
   - component: {fileID: 976287737}
   m_Layer: 0
-  m_Name: EventSystem
+  m_Name: Event System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -676,7 +677,7 @@ GameObject:
   - component: {fileID: 1260343845}
   - component: {fileID: 1260343844}
   m_Layer: 0
-  m_Name: Background_Music
+  m_Name: Background Music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -695,9 +696,9 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 74b75492565c0f74bb4d216479dd8ad0, type: 3}
   m_Resource: {fileID: 8300000, guid: 74b75492565c0f74bb4d216479dd8ad0, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.05
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -787,12 +788,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1260343843}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 410.3584, y: 173.81705, z: 0.5839505}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 410.3584, y: 173.81705, z: 10.58395}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 843676876}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1321284538
 GameObject:
@@ -807,7 +808,7 @@ GameObject:
   - component: {fileID: 1321284541}
   - component: {fileID: 1321284540}
   m_Layer: 5
-  m_Name: About_Button
+  m_Name: About Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1080,7 +1081,7 @@ GameObject:
   - component: {fileID: 1437992571}
   - component: {fileID: 1437992570}
   m_Layer: 5
-  m_Name: Copy_Right
+  m_Name: Copy Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1377,7 +1378,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7798383005610033861, guid: ca2a34750e399754582788d9b2a72184, type: 3}
       propertyPath: m_Name
-      value: Play_Button
+      value: Play Button
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1391,4 +1392,3 @@ SceneRoots:
   - {fileID: 843676876}
   - {fileID: 377721449}
   - {fileID: 976287739}
-  - {fileID: 1260343845}

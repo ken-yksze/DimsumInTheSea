@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Orange reefs_0: 7002169759712761411
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
