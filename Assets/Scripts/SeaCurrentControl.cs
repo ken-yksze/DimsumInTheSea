@@ -14,7 +14,7 @@ public class SeaCurrentControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (bubbleRb != null)
+        if (bubbleRb.enabled)
         {
             bubbleRb.linearVelocity = new Vector2(speed / bubbleRb.mass, bubbleRb.linearVelocity.y);
         }

@@ -109,7 +109,7 @@ public class BubbleControl : MonoBehaviour
         }
     }
 
-    void OnDestroy()
+    void OnDisable()
     {
         Rigidbody2D playerRb = player.GetComponent<Rigidbody2D>();
         playerRb.simulated = true;
@@ -129,7 +129,7 @@ public class BubbleControl : MonoBehaviour
                 AudioSource.PlayClipAtPoint(collisionSound, transform.position, 1.0f);
             }
 
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
 
         if (collision.gameObject.CompareTag("Dimsum"))
@@ -144,8 +144,8 @@ public class BubbleControl : MonoBehaviour
                 AudioSource.PlayClipAtPoint(collectSound, transform.position, 1.0f);
             }
 
-            // Destroy the dim sum object
-            Destroy(collision.gameObject);
+            // Deactivate the dim sum object
+            collision.gameObject.SetActive(false);
         }
     }
 }
