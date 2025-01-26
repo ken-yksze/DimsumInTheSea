@@ -34,7 +34,7 @@ public class PlayerBubbleControl : MonoBehaviour
     {
         if (bubble.activeSelf)
         {
-            transform.position = bubble.transform.position;
+            transform.position = new Vector3(bubble.transform.position.x, bubble.transform.position.y, transform.position.z);
         }
         else
         {
