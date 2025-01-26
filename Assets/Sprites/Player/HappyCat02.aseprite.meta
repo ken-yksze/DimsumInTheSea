@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d86cbebc4ee1ec4428a43b634b28c9e4
+guid: e95bb27093b9b214d9a486f3b04ce90f
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,9 +123,9 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: SmalllBubble
+  - name: HappyCat02
     originalName: 
-    pivot: {x: 0.48148146, y: -0.9629629}
+    pivot: {x: 0.30136988, y: -0.01923077}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -133,9 +133,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 27
-      height: 27
-    spriteID: 963fb2aa3bb32824a8553e149fbb1021
+      width: 73
+      height: 52
+    spriteID: 55dbfaf9b4ef46d40a95afdb840e5401
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -147,21 +147,21 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1697018329
-    name: SmalllBubble
+    guid: -1941731606
+    name: HappyCat02
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: SmalllBubble
+    - name: HappyCat02
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 27
-        y: 26
-        width: 27
-        height: 27
-      spriteId: 963fb2aa3bb32824a8553e149fbb1021
+        x: 8
+        y: 1
+        width: 73
+        height: 52
+      spriteId: 55dbfaf9b4ef46d40a95afdb840e5401
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -180,5 +180,5 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 80, y: 80}
-  previousTextureSize: {x: 64, y: 64}
+  canvasSize: {x: 60, y: 60}
+  previousTextureSize: {x: 128, y: 64}

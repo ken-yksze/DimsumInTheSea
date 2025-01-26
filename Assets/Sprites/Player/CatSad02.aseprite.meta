@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 75d6ee5d33710804d92c8e6bd6f40223
+guid: 0c7f1208c885f1e4981e8a0dcdeba46c
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,9 +123,9 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: NormalBubble
+  - name: CatSad02
     originalName: 
-    pivot: {x: 0.5, y: -0.33333334}
+    pivot: {x: 0.30136988, y: -0.01923077}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -133,9 +133,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 48
-      height: 48
-    spriteID: 936d6a16cb4bc4f49b7a73d9b2f65850
+      width: 73
+      height: 52
+    spriteID: 8fbbc6dc21cb90c4d8a055a4e4360dca
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -147,21 +147,21 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1999952335
-    name: NormalBubble
+    guid: -164389624
+    name: CatSad02
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: NormalBubble
+    - name: CatSad02
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 16
-        y: 16
-        width: 48
-        height: 48
-      spriteId: 936d6a16cb4bc4f49b7a73d9b2f65850
+        x: 8
+        y: 1
+        width: 73
+        height: 52
+      spriteId: 8fbbc6dc21cb90c4d8a055a4e4360dca
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -180,5 +180,5 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 80, y: 80}
-  previousTextureSize: {x: 64, y: 64}
+  canvasSize: {x: 60, y: 60}
+  previousTextureSize: {x: 128, y: 64}
