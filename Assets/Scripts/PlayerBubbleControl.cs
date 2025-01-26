@@ -24,7 +24,7 @@ public class PlayerBubbleControl : MonoBehaviour
 
             if (Mathf.Abs(vertical) >= 0.0001f)
             {
-                bubbleBc.airAmount += vertical / 16f;
+                bubbleBc.airAmount += vertical / 30f;
             }
         }
     }
@@ -51,6 +51,13 @@ public class PlayerBubbleControl : MonoBehaviour
                 AudioSource.PlayClipAtPoint(collisionSound, transform.position, 1.0f);
             }
         }
-
+        if (collision.gameObject.CompareTag("Dimsum"))
+        {
+            gameControl.GameOver();
+            if (collisionSound)
+            {
+                AudioSource.PlayClipAtPoint(collisionSound, transform.position, 1.0f);
+            }
+        }
     }
 }
