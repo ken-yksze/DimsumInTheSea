@@ -14,7 +14,7 @@ public class PlayerBubbleControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (bubbleBc != null)
+        if (bubbleBc.enabled)
         {
             float vertical = Input.GetAxis("Vertical");
 
@@ -27,7 +27,7 @@ public class PlayerBubbleControl : MonoBehaviour
 
     void LateUpdate()
     {
-        if (bubble != null)
+        if (bubble.activeSelf)
         {
             transform.position = new Vector3(bubble.transform.position.x, bubble.transform.position.y, transform.position.z);
         }
