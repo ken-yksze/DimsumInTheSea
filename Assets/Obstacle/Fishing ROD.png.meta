@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3c4a4e02c2f836449b660d00b549295b
+guid: bbdba5a80406a624090f4cbe4d814cd6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4228002704803945580
-    second: CatSad_0
+      213: 6359784649499917501
+    second: Fishing ROD_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CatSad_0
+      name: Fishing ROD_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 60
-        height: 60
+        width: 595
+        height: 540
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c6cda312f02ecaa30800000000000000
-      internalID: 4228002704803945580
+      spriteID: dbcbc61717e724850800000000000000
+      internalID: 6359784649499917501
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      CatSad_0: 4228002704803945580
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

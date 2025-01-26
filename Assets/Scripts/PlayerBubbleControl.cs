@@ -7,6 +7,7 @@ public class PlayerBubbleControl : MonoBehaviour
     public Rigidbody2D rb;
 
     public GameControl gameControl; // Reference to your GameControl script
+    public AudioClip collisionSound; // Assign an audio clip in the Inspector.
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,7 +24,7 @@ public class PlayerBubbleControl : MonoBehaviour
 
             if (Mathf.Abs(vertical) >= 0.0001f)
             {
-                bubbleBc.airAmount += vertical / 16f;
+                bubbleBc.airAmount += vertical / 30f;
             }
         }
     }
@@ -45,6 +46,18 @@ public class PlayerBubbleControl : MonoBehaviour
         if (collision.gameObject.CompareTag("Obstacle"))
         {
             gameControl.GameOver();
+            if (collisionSound)
+            {
+                AudioSource.PlayClipAtPoint(collisionSound, transform.position, 1.0f);
+            }
+        }
+        if (collision.gameObject.CompareTag("Dimsum"))
+        {
+            gameControl.GameOver();
+            if (collisionSound)
+            {
+                AudioSource.PlayClipAtPoint(collisionSound, transform.position, 1.0f);
+            }
         }
     }
 }

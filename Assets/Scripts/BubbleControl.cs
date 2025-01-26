@@ -5,6 +5,7 @@ public class BubbleControl : MonoBehaviour
 {
     public GameObject player;
     public Rigidbody2D rb;
+    public GameObject winPanel; // Reference to your GameControl script
 
     public delegate void OnAirAmountChanged(float airAmount);
     public static event OnAirAmountChanged AirAmountChanged;
@@ -143,6 +144,15 @@ public class BubbleControl : MonoBehaviour
 
             // Deactivate the dim sum object
             collision.gameObject.SetActive(false);
+
+            // Stop the game
+            Time.timeScale = 0;
+
+            // Show the win panel
+            if (winPanel != null)
+            {
+                winPanel.SetActive(true);
+            }
         }
     }
 }

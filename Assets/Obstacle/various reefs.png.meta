@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 3c4a4e02c2f836449b660d00b549295b
+guid: 374760427e8fc294ebd78ef4a5053d58
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4228002704803945580
-    second: CatSad_0
+      213: 5646477723280291210
+    second: various reefs_0
+  - first:
+      213: -2872235570187266672
+    second: various reefs_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CatSad_0
+      name: various reefs_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 60
-        height: 60
+        y: 44
+        width: 551
+        height: 422
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +131,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c6cda312f02ecaa30800000000000000
-      internalID: 4228002704803945580
+      spriteID: a853740b2915c5e40800000000000000
+      internalID: 5646477723280291210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: various reefs_1
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 0
+        width: 1361
+        height: 490
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0951fb777f4c328d0800000000000000
+      internalID: -2872235570187266672
       vertices: []
       indices: 
       edges: []
@@ -147,8 +172,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      CatSad_0: 4228002704803945580
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
