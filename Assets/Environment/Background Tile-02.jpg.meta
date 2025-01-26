@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3c4a4e02c2f836449b660d00b549295b
+guid: 3978db6e772c03246bf9892729c13464
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4228002704803945580
-    second: CatSad_0
+      213: 3792098643413449898
+    second: Background Tile-02_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CatSad_0
+      name: Background Tile-02_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 60
-        height: 60
+        width: 8000
+        height: 4500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c6cda312f02ecaa30800000000000000
-      internalID: 4228002704803945580
+      spriteID: aac36e1ff9d30a430800000000000000
+      internalID: 3792098643413449898
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      CatSad_0: 4228002704803945580
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
