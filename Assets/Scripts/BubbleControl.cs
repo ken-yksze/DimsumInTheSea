@@ -64,16 +64,13 @@ public class BubbleControl : MonoBehaviour
         transform.localScale = new Vector2(size, size);
     }
 
-    void Awake()
-    {
-        AirAmountChanged += AdjustSize;
-        AirAmountChanged += AdjustGravity;
-        SizeChanged += AdjustScale;
-    }
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        AirAmountChanged = AdjustSize;
+        AirAmountChanged += AdjustGravity;
+        SizeChanged = AdjustScale;
+
         airAmount = _meanAirAmount;
         _vibrateAngularIncrement = 2 * Mathf.PI * Time.fixedDeltaTime / _vibrateCycleSecs;
         _vibrateDirection = transform.up;

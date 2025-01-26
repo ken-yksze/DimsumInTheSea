@@ -6,9 +6,12 @@ public class PlayerBubbleControl : MonoBehaviour
     public BubbleControl bubbleBc;
     public Rigidbody2D rb;
 
+    public GameControl gameControl; // Reference to your GameControl script
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        gameControl = FindAnyObjectByType<GameControl>(); // Cache GameControl reference
     }
 
     // Update is called once per frame
@@ -34,6 +37,14 @@ public class PlayerBubbleControl : MonoBehaviour
         else
         {
             rb.simulated = true;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            gameControl.GameOver();
         }
     }
 }
