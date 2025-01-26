@@ -6900,6 +6900,7 @@ MonoBehaviour:
   bubbleBc: {fileID: 26413547}
   rb: {fileID: 2015347207}
   gameControl: {fileID: 519420034}
+  collisionSound: {fileID: 8300000, guid: 2abe7687963e56c4b9bed6706ab44ca6, type: 3}
 --- !u!70 &2015347213
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
