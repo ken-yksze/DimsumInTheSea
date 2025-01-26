@@ -1,9 +1,11 @@
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class BubbleControl : MonoBehaviour
 {
     public GameObject player;
     public Rigidbody2D rb;
+    public GameObject winPanel; // Reference to your GameControl script
 
     public delegate void OnAirAmountChanged(float airAmount);
     public static event OnAirAmountChanged AirAmountChanged;
@@ -44,6 +46,10 @@ public class BubbleControl : MonoBehaviour
         }
     }
 
+    public GameObject collisionEffectPrefab; // Assign a visual effect prefab in the Inspector.
+    public AudioClip collisionSound; // Assign an audio clip in the Inspector.
+    public AudioClip collectSound; // Assign an audio clip in the Inspector.
+
     void AdjustSize(float airAmount)
     {
         size = Mathf.Sqrt(airAmount);
@@ -59,16 +65,13 @@ public class BubbleControl : MonoBehaviour
         transform.localScale = new Vector2(size, size);
     }
 
-    void Awake()
-    {
-        AirAmountChanged += AdjustSize;
-        AirAmountChanged += AdjustGravity;
-        SizeChanged += AdjustScale;
-    }
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        AirAmountChanged = AdjustSize;
+        AirAmountChanged += AdjustGravity;
+        SizeChanged = AdjustScale;
+
         airAmount = _meanAirAmount;
         _vibrateAngularIncrement = 2 * Mathf.PI * Time.fixedDeltaTime / _vibrateCycleSecs;
         _vibrateDirection = transform.up;
@@ -104,13 +107,52 @@ public class BubbleControl : MonoBehaviour
         }
     }
 
-    void OnDisabled()
+    void OnDisable()
     {
-
+        Rigidbody2D playerRb = player.GetComponent<Rigidbody2D>();
+        playerRb.simulated = true;
     }
 
-    void OnDestroy()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            if (collisionEffectPrefab)
+            {
+                Instantiate(collisionEffectPrefab, collision.contacts[0].point, Quaternion.identity);
+            }
 
+            if (collisionSound)
+            {
+                AudioSource.PlayClipAtPoint(collisionSound, transform.position, 1.0f);
+            }
+
+            gameObject.SetActive(false);
+        }
+
+        if (collision.gameObject.CompareTag("Dimsum"))
+        {
+            if (collisionEffectPrefab)
+            {
+                Instantiate(collisionEffectPrefab, collision.contacts[0].point, Quaternion.identity);
+            }
+
+            if (collectSound)
+            {
+                AudioSource.PlayClipAtPoint(collectSound, transform.position, 1.0f);
+            }
+
+            // Deactivate the dim sum object
+            collision.gameObject.SetActive(false);
+
+            // Stop the game
+            Time.timeScale = 0;
+
+            // Show the win panel
+            if (winPanel != null)
+            {
+                winPanel.SetActive(true);
+            }
+        }
     }
 }

@@ -3,7 +3,8 @@ using UnityEngine;
 public class SeaCurrentControl : MonoBehaviour
 {
     public Rigidbody2D bubbleRb;
-    public float speed = 2f;
+    public Animator animator;
+    public float speed = 1f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -14,9 +15,10 @@ public class SeaCurrentControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (bubbleRb != null)
+        if (bubbleRb.gameObject.activeSelf)
         {
-            bubbleRb.linearVelocity = new Vector2(speed / bubbleRb.mass, bubbleRb.linearVelocity.y);
+            animator.speed = speed / bubbleRb.mass;
+            bubbleRb.linearVelocity = new Vector2(speed + speed / bubbleRb.mass, bubbleRb.linearVelocity.y);
         }
     }
 }

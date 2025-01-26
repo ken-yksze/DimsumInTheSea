@@ -15,12 +15,7 @@ public class CameraFollow : MonoBehaviour
         _cameraRightLimit = seaTf.localScale.x - GetComponent<Camera>().orthographicSize / 2f;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    // LateUpdate is called once per frame after Update
     void LateUpdate()
     {
         transform.position = new Vector3(Mathf.Clamp(playerTf.position.x + _offsetX, 0, _cameraRightLimit - 15.5f), transform.position.y, transform.position.z);
